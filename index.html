@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky | AI Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Page wipe entrance -->
+  <div id="pageWipe"></div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Ambient layer -->
+  <div class="ambient"></div>
+  <div class="scanlines"></div>
+
+  <!-- Background: grid + "AI" text flood -->
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="aiTextCanvas"></canvas>
+
+  <nav id="mainNav">
+    <div class="container nav-inner">
+      <div class="logo">LUCKY.AI</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#myprojects">My Projects</a></li>
+        <li><a href="#projects">AI Videos</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> AVAILABLE FOR AI &amp; AUTOMATION PROJECTS</div>
+        <h1 class="hero-title">Building the <span class="grad">Agentic AI</span> Future, One Workflow at a Time.</h1>
+        <p class="sub hero-sub">Hi, I'm Lucky — an aspiring AI technologist exploring agentic AI, automation, and
+          intelligent systems, blending code, strategy, and creativity into futuristic digital experiences.</p>
+        <div class="tagrow hero-tagrow">
+          <span class="tag">Agentic AI · Certified</span>
+          <span class="tag">Python · Certified</span>
+          <span class="tag">Marketing</span>
+          <span class="tag">AI Technology</span>
+        </div>
+        <div class="hero-buttons hero-btns">
+          <a href="#projects" class="btn btn-primary">View My AI Reels →</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="ring ring3"></div>
+        <div class="hud hud-tl"></div>
+        <div class="hud hud-tr"></div>
+        <div class="hud hud-bl"></div>
+        <div class="hud hud-br"></div>
+        <div class="scan-line"></div>
+        <img class="portrait" src="images/lucky1.jpeg" alt="Lucky portrait">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="container about-grid">
+      <img class="about-photo reveal-left" src="images/lucky 3.jpeg" alt="Lucky">
+      <div class="about-text reveal-right">
+        <div class="section-eyebrow">// ABOUT ME</div>
+        <h2 class="section-title">Curious mind. Future-focused builder.</h2>
+        <div class="section-line"></div>
+        <p>I'm currently navigating the world of <strong>Agentic AI</strong> — systems that don't just respond, but
+          think, plan, and act. My goal is to combine that with practical <strong>Python</strong> development and
+          <strong>marketing strategy</strong> to build tools that genuinely help people.</p>
+        <p>Having completed my <strong>12th grade education</strong>, I've chosen to go deep into AI technology early —
+          learning by building, experimenting with automations, and creating AI-driven content and reels that explore
+          what the next era of intelligent software looks like.</p>
+        <p>This portfolio itself is part of that journey: an AI-themed, animation-rich space designed and structured
+          with the same future-forward thinking I bring to my projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-eyebrow reveal">// CAPABILITIES</div>
+      <h2 class="section-title reveal">Core Skill Stack</h2>
+      <div class="section-line reveal"></div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-flip delay-1">
+          <span class="skill-icon"><img src="./images/icons8-ai.svg" alt=""></span>
+          <h3>Agentic AI</h3>
+          <p>Certified — designing AI systems that plan and execute multi-step tasks autonomously.</p>
+          <div class="skill-bar"><span style="--w:90%"></span></div>
+        </div>
+        <div class="skill-card reveal-flip delay-2">
+          <span class="skill-icon"><img src="./images/icons8-python.svg" alt=""></span>
+          <h3>Python</h3>
+          <p>Certified — scripting, automation, and core programming logic for AI workflows.</p>
+          <div class="skill-bar"><span style="--w:85%"></span></div>
+        </div>
+        <div class="skill-card reveal-flip delay-3">
+          <span class="skill-icon">📈</span>
+          <h3>Marketing</h3>
+          <p>Brand storytelling, content strategy, and growth thinking for digital products.</p>
+          <div class="skill-bar"><span style="--w:75%"></span></div>
+        </div>
+        <div class="skill-card reveal-flip delay-4">
+          <span class="skill-icon">⚡</span>
+          <h3>AI Technology</h3>
+          <p>Hands-on with generative AI tools, AI video creation, and emerging tech trends.</p>
+          <div class="skill-bar"><span style="--w:88%"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MY PROJECTS ── -->
+  <section id="myprojects">
+    <div class="container">
+      <div class="section-eyebrow reveal">// PORTFOLIO</div>
+      <h2 class="section-title reveal">My Projects</h2>
+      <div class="section-line reveal"></div>
+      <div class="project-grid">
+        <div class="project-card reveal-scale delay-1">
+          <div class="project-card-media">
+            <img src="images/jop.jpg" alt="AI Futuristic Portfolio Website">
+            <div class="project-card-overlay">
+              <a href="AI-Future-Website-Ideas.html" target="_blank" class="overlay-link">🔗 View Live Project →</a>
+            </div>
+          </div>
+          <div class="project-card-info">
+            <h3>AI Futuristic Portfolio Website</h3>
+            <p>A black, purple-themed AI portfolio built with custom animations, glowing UI elements, and an interactive
+              AI assistant.</p>
+            <div class="project-card-footer">
+              <span class="reel-tag">Web Design · HTML/CSS/JS</span>
+              <a href="AI-Future-Website-Ideas.html" target="_blank"
+                style="color:var(--accent);font-size:12px;text-decoration:none;font-weight:700;">→ Open</a>
+            </div>
+          </div>
+        </div>
+        <!-- Python Image Slideshow -->
+        <div class="project-card reveal-scale delay-2">
+          <div class="project-card-media"
+            style="background:#0d0020;flex-direction:column;align-items:stretch;padding:0;aspect-ratio:16/10;">
+
+            <!-- Window chrome bar -->
+            <div
+              style="display:flex;align-items:center;gap:6px;padding:9px 14px;background:rgba(124,58,237,0.15);border-bottom:1px solid rgba(124,58,237,0.2);flex-shrink:0;">
+              <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+              <span
+                style="color:var(--muted);font-size:10px;margin-left:8px;letter-spacing:1px;font-family:monospace;">🐍
+                image slides — Python Tkinter</span>
+            </div>
+
+            <!-- Tkinter window simulation -->
+            <div
+              style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:14px 16px 16px;background:linear-gradient(160deg,#0d0020 0%,#130030 100%);">
+
+              <!-- Image display area — slideshow -->
+              <div id="slideshowFrame" style="
+              width:100%;flex:1;
+              border-radius:8px;
+              border:1px solid rgba(124,58,237,0.35);
+              background:#000;
+              overflow:hidden;
+              position:relative;
+              display:flex;align-items:center;justify-content:center;
+              margin-bottom:12px;
+              box-shadow:0 0 20px rgba(124,58,237,0.2);
+            ">
+                <!-- Slides: real uploaded images -->
+                <div class="slide" style="position:absolute;inset:0;opacity:1;transition:opacity .7s;">
+                  <img src="pth.1.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div
+                    style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);font-size:10px;color:rgba(255,255,255,0.7);font-family:monospace;letter-spacing:1px;">
+                    pth_1.jpg · 700×700</div>
+                </div>
+                <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity .7s;">
+                  <img src="pth.2.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div
+                    style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);font-size:10px;color:rgba(255,255,255,0.7);font-family:monospace;letter-spacing:1px;">
+                    pth_2.jpg · 700×700</div>
+                </div>
+                <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity .7s;">
+                  <img src="pth.3.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div
+                    style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);font-size:10px;color:rgba(255,255,255,0.7);font-family:monospace;letter-spacing:1px;">
+                    pth_3.jpg · 700×700</div>
+                </div>
+                <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity .7s;">
+                  <img src="pth.4.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div
+                    style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);font-size:10px;color:rgba(255,255,255,0.7);font-family:monospace;letter-spacing:1px;">
+                    pth_4.jpg · 700×700</div>
+                </div>
+                <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity .7s;">
+                  <img src="pth.5.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div
+                    style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);font-size:10px;color:rgba(255,255,255,0.7);font-family:monospace;letter-spacing:1px;">
+                    pth_5.jpg · 700×700</div>
+                </div>
+                <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity .7s;">
+                  <img src="pth.6.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div
+                    style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);font-size:10px;color:rgba(255,255,255,0.7);font-family:monospace;letter-spacing:1px;">
+                    pth_6.jpg · 700×700</div>
+                </div>
+
+                <!-- Slide counter badge -->
+                <div id="slideCounter" style="
+                position:absolute;top:8px;right:8px;
+                font-size:10px;font-family:monospace;
+                background:rgba(0,0,0,0.6);color:var(--accent);
+                padding:3px 8px;border-radius:50px;
+                border:1px solid rgba(192,132,252,0.3);
+                letter-spacing:1px;
+              ">1 / 6</div>
+
+                <!-- Progress bar -->
+                <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:rgba(255,255,255,0.08);">
+                  <div id="slideProgress"
+                    style="height:100%;width:0%;background:linear-gradient(90deg,var(--purple),var(--accent));transition:width .1s linear;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thumbnail dot nav -->
+              <div id="slideDots" style="display:flex;gap:6px;justify-content:center;margin-bottom:10px;">
+                <img src="pth_1.jpg" onclick="pyGoTo(0)" class="slide-thumb active-thumb"
+                  style="width:32px;height:32px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid var(--accent);opacity:1;transition:.3s;">
+                <img src="pth_2.jpg" onclick="pyGoTo(1)" class="slide-thumb"
+                  style="width:32px;height:32px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;opacity:0.45;transition:.3s;">
+                <img src="pth_3.jpg" onclick="pyGoTo(2)" class="slide-thumb"
+                  style="width:32px;height:32px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;opacity:0.45;transition:.3s;">
+                <img src="pth_4.jpg" onclick="pyGoTo(3)" class="slide-thumb"
+                  style="width:32px;height:32px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;opacity:0.45;transition:.3s;">
+                <img src="pth_5.jpg" onclick="pyGoTo(4)" class="slide-thumb"
+                  style="width:32px;height:32px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;opacity:0.45;transition:.3s;">
+                <img src="pth_6.jpg" onclick="pyGoTo(5)" class="slide-thumb"
+                  style="width:32px;height:32px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;opacity:0.45;transition:.3s;">
+              </div>
+
+              <!-- Tkinter-style button row -->
+              <div style="display:flex;gap:8px;width:100%;align-items:center;">
+                <button onclick="pyGoTo((pySlideIdx-1+6)%6)" style="
+                padding:9px 14px;border-radius:6px;border:1px solid rgba(124,58,237,0.4);cursor:pointer;
+                background:rgba(124,58,237,0.15);color:var(--accent);font-size:14px;font-weight:700;
+                transition:.3s;flex-shrink:0;
+              ">‹</button>
+                <button id="pyPlayBtn" onclick="togglePySlideshow()" style="
+                flex:1;padding:9px 0;border-radius:6px;border:none;cursor:pointer;
+                background:linear-gradient(135deg,var(--purple),var(--purple-light));
+                color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;
+                font-family:'Space Grotesk',sans-serif;
+                box-shadow:0 4px 16px rgba(124,58,237,0.4);
+                transition:.3s;
+              ">▶ Play Slideshow</button>
+                <button onclick="pyGoTo((pySlideIdx+1)%6)" style="
+                padding:9px 14px;border-radius:6px;border:1px solid rgba(124,58,237,0.4);cursor:pointer;
+                background:rgba(124,58,237,0.15);color:var(--accent);font-size:14px;font-weight:700;
+                transition:.3s;flex-shrink:0;
+              ">›</button>
+              </div>
+
+            </div><!-- end tkinter sim -->
+
+          </div><!-- end project-card-media -->
+          <div class="project-card-info">
+            <h3>Python Image Slideshow App</h3>
+            <p>A desktop GUI app built with <strong style="color:var(--accent);">Python + Tkinter</strong> that loads 6
+              images, resizes them to 700×700, converts them to Tkinter-compatible format, and cycles through them
+              automatically every 2 seconds via a Play button.</p>
+            <div class="project-card-footer">
+              <span class="reel-tag">Python · Tkinter · PIL</span>
+              <span style="color:var(--muted);font-size:11px;">Desktop App</span>
+            </div>
+            <!-- Feature chips -->
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+              <span
+                style="font-size:10px;padding:3px 10px;border-radius:50px;border:1px solid rgba(168,85,247,0.2);color:var(--muted);">🖼️
+                Auto-slideshow</span>
+              <span
+                style="font-size:10px;padding:3px 10px;border-radius:50px;border:1px solid rgba(168,85,247,0.2);color:var(--muted);">🔄
+                2s Loop</span>
+              <span
+                style="font-size:10px;padding:3px 10px;border-radius:50px;border:1px solid rgba(168,85,247,0.2);color:var(--muted);">📐
+                Image Resize</span>
+              <span
+                style="font-size:10px;padding:3px 10px;border-radius:50px;border:1px solid rgba(168,85,247,0.2);color:var(--muted);">🖱️
+                GUI Button</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AI VIDEOS — 3-per-row + background video ── -->
+  <section id="projects">
+    <!-- Background video layer -->
+    <div class="video-section-bg">
+      <video src="ljkdhf.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+    </div>
+
+    <div class="video-section-inner">
+      <div class="container">
+        <div class="section-eyebrow reveal">// FEATURED WORK</div>
+        <h2 class="section-title reveal">AI Video Gallery</h2>
+        <div class="section-line reveal"></div>
+
+        <!-- Row 1 -->
+        <div class="video-grid" style="margin-bottom:20px;">
+          <div class="video-card reveal delay-1">
+            <video src="images/pv.1.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+            <div class="video-overlay"></div>
+            <div class="video-play">▶</div>
+            <div class="video-info">
+              <h3>AI Vision Reel</h3>
+              <span class="reel-tag">AI Generated</span>
+            </div>
+          </div>
+          <div class="video-card reveal delay-2">
+            <video src="images/python video.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+            <div class="video-overlay"></div>
+            <div class="video-play">▶</div>
+            <div class="video-info">
+              <h3>Python Programming</h3>
+              <span class="reel-tag">AI Generated</span>
+            </div>
+          </div>
+          <div class="video-card reveal delay-3">
+            <video src="images/fdgr.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+            <div class="video-overlay"></div>
+            <div class="video-play">▶</div>
+            <div class="video-info">
+              <h3>AI Effect on World</h3>
+              <span class="reel-tag">AI Generated</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="video-grid">
+          <div class="video-card reveal delay-1">
+            <video src="images/pv.2.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+            <div class="video-overlay"></div>
+            <div class="video-play">▶</div>
+            <div class="video-info">
+              <h3>Future of India</h3>
+              <span class="reel-tag">AI Generated</span>
+            </div>
+          </div>
+          <div class="video-card reveal delay-2">
+            <video src="images/pyth2.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+            <div class="video-overlay"></div>
+            <div class="video-play">▶</div>
+            <div class="video-info">
+              <h3>Python Mobile</h3>
+              <span class="reel-tag">AI Generated</span>
+            </div>
+          </div>
+          <div class="video-card reveal delay-3">
+            <video src="images/yhusfdks.mp4" autoplay muted loop playsinline disablePictureInPicture></video>
+            <div class="video-overlay"></div>
+            <div class="video-play">▶</div>
+            <div class="video-info">
+              <h3>AI Concept Video</h3>
+              <span class="reel-tag">AI Generated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── JOURNEY ── -->
+  <section id="journey">
+    <div class="container">
+      <div class="section-eyebrow reveal">// THE PATH SO FAR</div>
+      <h2 class="section-title reveal">My Journey</h2>
+      <div class="section-line reveal"></div>
+      <div class="timeline">
+        <div class="timeline-item reveal delay-1">
+          <h3>12th Grade — Education Foundation</h3>
+          <p>Completed senior secondary education, building a base in analytical thinking.</p>
+        </div>
+        <div class="timeline-item reveal delay-2">
+          <h3>Python Certification</h3>
+          <p>Learned programming fundamentals and applied them to real automation tasks.</p>
+        </div>
+        <div class="timeline-item reveal delay-3">
+          <h3>Agentic AI Certification</h3>
+          <p>Studied autonomous AI agents — how they reason, plan, and execute tasks.</p>
+        </div>
+        <div class="timeline-item reveal delay-4">
+          <h3>AI Content &amp; Marketing</h3>
+          <p>Started creating AI-generated reels and exploring marketing for AI-driven products.</p>
+        </div>
+        <div class="timeline-item reveal delay-5">
+          <h3>Now — Building This Portfolio</h3>
+          <p>Bringing it all together into a futuristic digital presence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-eyebrow reveal" style="text-align:center;">// GET IN TOUCH</div>
+      <h2 class="section-title reveal" style="text-align:center;">Let's Build Something <span
+          class="grad">Intelligent.</span></h2>
+      <div class="section-line reveal" style="margin:0 auto 52px;"></div>
+
+      <div class="contact-box reveal">
+        <p style="color:var(--muted);margin-bottom:44px;font-size:16px;">Open to collaborations, internships, and
+          AI-driven projects.<br>Reach out on any platform — I'm always happy to connect.</p>
+
+        <!-- Social link cards -->
+        <div class="contact-socials">
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/luckyaicon?igsh=MXV6bTdoOGJ3aGprbw==" target="_blank" class="social-card">
+            <div class="social-icon-wrap" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8" />
+                <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" />
+                <circle cx="17.5" cy="6.5" r="1" fill="white" />
+              </svg>
+            </div>
+            <div class="social-info">
+              <span class="social-label">Instagram</span>
+              <span class="social-handle">@luckyaicon</span>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/💎✨-𝑳𝒖𝒄𝒌𝒚-𝑲𝒂𝒔𝒉𝒚𝒂𝒑-✨💎-28413637b" target="_blank"
+            class="social-card">
+            <div class="social-icon-wrap" style="background:linear-gradient(135deg,#0077b5,#00a0dc);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.8v2.1h.05c.53-1 1.83-2.1 3.77-2.1C19.7 8.5 21 10.3 21 14v10h-4v-8.9c0-2.1-.04-4.8-2.95-4.8-2.96 0-3.41 2.3-3.41 4.68V24H7V8.5z" />
+              </svg>
+            </div>
+            <div class="social-info">
+              <span class="social-label">LinkedIn</span>
+              <span class="social-handle">Lucky Kashyap</span>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/qr/KQ7PIPO26LNWM1" target="_blank" class="social-card">
+            <div class="social-icon-wrap" style="background:linear-gradient(135deg,#25d366,#128c7e);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.09-1.34A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 13.7c-.2.56-1.18 1.08-1.63 1.14-.42.06-.95.08-1.53-.1-.35-.1-.81-.27-1.38-.52-2.43-1.05-4.02-3.5-4.14-3.66-.12-.16-.97-1.29-.97-2.46 0-1.17.61-1.74.83-1.98.22-.24.48-.3.64-.3l.46.01c.15 0 .35-.06.54.42.2.5.7 1.7.76 1.82.06.12.1.27.02.43-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.25-.1.49.14.24.62 1.02 1.33 1.65.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.56-.14 1.12z" />
+              </svg>
+            </div>
+            <div class="social-info">
+              <span class="social-label">WhatsApp</span>
+              <span class="social-handle">Message Me Directly</span>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* ── Contact Social Cards ── */
+  </style>
+
+  <footer>
+    <div class="container"
+      style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <span>© 2026 Lucky Kashyap · AI Futuristic Portfolio</span>
+      <div style="display:flex;gap:20px;">
+        <a href="https://www.instagram.com/luckyaicon?igsh=MXV6bTdoOGJ3aGprbw==" target="_blank"
+          style="color:var(--muted);text-decoration:none;font-size:13px;transition:.3s;"
+          onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Instagram</a>
+        <a href="https://www.linkedin.com/in/💎✨-𝑳𝒖𝒄𝒌𝒚-𝑲𝒂𝒔𝒉𝒚𝒂𝒑-✨💎-28413637b" target="_blank"
+          style="color:var(--muted);text-decoration:none;font-size:13px;transition:.3s;"
+          onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">LinkedIn</a>
+        <a href="https://wa.me/qr/KQ7PIPO26LNWM1" target="_blank"
+          style="color:var(--muted);text-decoration:none;font-size:13px;transition:.3s;"
+          onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── AI ROBOT WIDGET ── -->
+  <div id="ai-bot">🤖</div>
+  <div id="chat-panel">
+    <div class="chat-head"><span class="b"></span><span>AI ASSISTANT // ONLINE</span></div>
+    <div id="chat-log">
+      <div class="msg bot">Hey! I'm Lucky's AI assistant. Ask me something about AI, or tap a topic below.</div>
+    </div>
+    <div class="chat-quick">
+      <button class="chip" data-q="agentic">Agentic AI</button>
+      <button class="chip" data-q="ml">Machine Learning</button>
+      <button class="chip" data-q="future">AI's Future</button>
+      <button class="chip" data-q="python">Why Python?</button>
+      <button class="chip" data-q="lucky">About Lucky</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
